@@ -1,0 +1,1095 @@
+{
+	"info": {
+		"_postman_id": "d7c7dced-576a-4c06-b22e-38056718eaa7",
+		"name": "User Todo Management Practical",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "20461760"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Todo",
+					"item": [
+						{
+							"name": "Create Todo",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "{{accessKey}}",
+										"value": "{{accessToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"test title\",\r\n    \"body\": \"this is test body\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/user/todo"
+							},
+							"response": [
+								{
+									"name": "Create Todo Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "{{accessKey}}",
+												"value": "{{accessToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"title\": \"test title\",\r\n    \"body\": \"this is test body\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/user/todo"
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "100"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "97"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 28 Dec 2024 14:59:11 GMT"
+										},
+										{
+											"key": "X-RateLimit-Reset",
+											"value": "1735397964"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "60"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"3c-7QdW+92k27az1vOD3Wi8youUpg8\""
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"message\": \"Todo has been successfully created.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Update Todo",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "{{accessKey}}",
+										"value": "{{accessToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"test title1\",\r\n    \"body\": \"this is test body1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/user/todo/6770123ff41c0890d4680355"
+							},
+							"response": [
+								{
+									"name": "Update Todo Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "{{accessKey}}",
+												"value": "{{accessToken}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"title\": \"test title1\",\r\n    \"body\": \"this is test body1\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/user/todo/6770123ff41c0890d4680355"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "100"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "97"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 28 Dec 2024 15:03:00 GMT"
+										},
+										{
+											"key": "X-RateLimit-Reset",
+											"value": "1735398197"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "60"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"3c-CLv61Ep/F+LOs7CgK1r1NBp//a4\""
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"message\": \"Todo has been successfully updated.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete Todo",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "{{accessKey}}",
+										"value": "{{accessToken}}",
+										"type": "text"
+									}
+								],
+								"url": "{{baseUrl}}/user/todo/6770123ff41c0890d4680355"
+							},
+							"response": [
+								{
+									"name": "Delete Todo Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "{{accessKey}}",
+												"value": "{{accessToken}}",
+												"type": "text"
+											}
+										],
+										"url": "{{baseUrl}}/user/todo/6770123ff41c0890d4680355"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "100"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "99"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 28 Dec 2024 15:04:28 GMT"
+										},
+										{
+											"key": "X-RateLimit-Reset",
+											"value": "1735398299"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "60"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"3c-opBVh39jaV4WjHNeFz1uRdpV4Cw\""
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"message\": \"Todo has been successfully deleted.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Get Todo List",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "{{accessKey}}",
+										"value": "{{accessToken}}",
+										"type": "text"
+									}
+								],
+								"url": "{{baseUrl}}/user/todo"
+							},
+							"response": [
+								{
+									"name": "Get Todo List Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "{{accessKey}}",
+												"value": "{{accessToken}}",
+												"type": "text"
+											}
+										],
+										"url": "{{baseUrl}}/user/todo"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "100"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "96"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 28 Dec 2024 14:59:16 GMT"
+										},
+										{
+											"key": "X-RateLimit-Reset",
+											"value": "1735397964"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "185"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"b9-O7t4qnGJFtptJ14bhDMw5zacf34\""
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"message\": \"Todo list found successfully.\",\n    \"data\": [\n        {\n            \"_id\": \"6770123ff41c0890d4680355\",\n            \"title\": \"test title\",\n            \"body\": \"this is test body\",\n            \"created_at\": 1735397951,\n            \"updated_at\": 0\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Get Todo",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "{{accessKey}}",
+										"value": "{{accessToken}}",
+										"type": "text"
+									}
+								],
+								"url": "{{baseUrl}}/user/todo/6770123ff41c0890d4680355"
+							},
+							"response": [
+								{
+									"name": "Get Todo Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "{{accessKey}}",
+												"value": "{{accessToken}}",
+												"type": "text"
+											}
+										],
+										"url": "{{baseUrl}}/user/todo/6770123ff41c0890d4680355"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "100"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "99"
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 28 Dec 2024 15:01:55 GMT"
+										},
+										{
+											"key": "X-RateLimit-Reset",
+											"value": "1735398146"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "178"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"b2-9gaztag0AIxB9fmF43EDc3LLams\""
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": 1,\n    \"message\": \"todo found successfully.\",\n    \"data\": {\n        \"_id\": \"6770123ff41c0890d4680355\",\n        \"title\": \"test title\",\n        \"body\": \"this is test body\",\n        \"created_at\": 1735397951,\n        \"updated_at\": 0\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Update Profile",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "{{accessKey}}",
+								"value": "{{accessToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"full_name\": \"abcs\",\r\n    \"phone\": 1010101012\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/user/profile"
+					},
+					"response": [
+						{
+							"name": "Update Profile Sucess",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "{{accessKey}}",
+										"value": "{{accessToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"full_name\": \"abcs\",\r\n    \"phone\": 1010101012\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/user/profile"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "98"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 Dec 2024 13:42:11 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1735393341"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "68"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"44-cpl8mTVcciY90yijlp/lXbSIT8s\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 1,\n    \"message\": \"Your profile has been successfully updated.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "{{accessKey}}",
+								"value": "{{accessToken}}",
+								"type": "text"
+							}
+						],
+						"url": "{{baseUrl}}/user/profile"
+					},
+					"response": [
+						{
+							"name": "Get Profile Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "{{accessKey}}",
+										"value": "{{accessToken}}",
+										"type": "text"
+									}
+								],
+								"url": "{{baseUrl}}/user/profile"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "99"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 Dec 2024 13:46:15 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1735393606"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "204"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"cc-GVdH7z1D1R7Mtxq6T+q5d+kDfmE\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 1,\n    \"message\": \"User found successfully!\",\n    \"data\": {\n        \"_id\": \"676ff308118034a9371b5874\",\n        \"full_name\": \"abcs\",\n        \"phone\": 1010101012,\n        \"email\": \"test+1@gmail.com\",\n        \"created_at\": 1735389960,\n        \"updated_at\": 1735393331\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Get User List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "{{accessKey}}",
+								"value": "{{accessToken}}",
+								"type": "text"
+							}
+						],
+						"url": "{{baseUrl}}/admin/user"
+					},
+					"response": [
+						{
+							"name": "Get User List Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "{{accessKey}}",
+										"value": "{{accessToken}}",
+										"type": "text"
+									}
+								],
+								"url": "{{baseUrl}}/admin/user"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "99"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 Dec 2024 16:41:57 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1735404148"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "350"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"15e-3aPL+UghbX94xLsmhWZwiNFaFic\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 1,\n    \"message\": \"Users have been found successfully!\",\n    \"data\": [\n        {\n            \"_id\": \"676ff308118034a9371b5874\",\n            \"full_name\": \"abcs\",\n            \"phone\": 1010101012,\n            \"email\": \"test+1@gmail.com\",\n            \"created_at\": 1735389960,\n            \"updated_at\": 1735393607\n        },\n        {\n            \"_id\": \"676ff27644c129d147577f28\",\n            \"full_name\": \"\",\n            \"phone\": 1010101010,\n            \"email\": \"test@gmail.com\",\n            \"created_at\": 1735389814,\n            \"updated_at\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "{{accessKey}}",
+								"value": "{{accessToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"full_name\": \"test123\",\r\n    \"email\": \"test+11@gmail.com\",\r\n    \"phone\": 1010101212,\r\n    \"password\": \"Abcd@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/admin/user"
+					},
+					"response": [
+						{
+							"name": "Create User Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "{{accessKey}}",
+										"value": "{{accessToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"full_name\": \"test123\",\r\n    \"email\": \"test+11@gmail.com\",\r\n    \"phone\": 1010101212,\r\n    \"password\": \"Abcd@123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/admin/user"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "97"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 28 Dec 2024 16:59:23 GMT"
+								},
+								{
+									"key": "X-RateLimit-Reset",
+									"value": "1735405183"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "52"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"34-+s5iyVomVL+EAOK533yVjbaoyb8\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 1,\n    \"message\": \"Users created successfully!\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"test+1@gmail.com\",\r\n    \"phone\": 1010101012,\r\n    \"password\": \"Abcd@123\",\r\n    \"confirm_password\": \"Abcd@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{baseUrl}}/auth/register"
+			},
+			"response": [
+				{
+					"name": "Success Register User",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"test+1@gmail.com\",\r\n    \"phone\": 1010101012,\r\n    \"password\": \"Abcd@123\",\r\n    \"confirm_password\": \"Abcd@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/auth/register"
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "100"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "98"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 28 Dec 2024 12:45:59 GMT"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1735389986"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "88"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"58-+xwi0e5W0VLkLPM8SGmPSHgIsp8\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 1,\n    \"message\": \"Congratulations! You've successfully signed up. Welcome aboard!\"\n}"
+				}
+			]
+		},
+		{
+			"name": "login User / Admin",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"if (pm.response.json().data) {\r",
+							"    pm.environment.set(\"accessToken\", pm.response.json().data.access_token);\r",
+							"}"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    // \"email\": \"test+1@gmail.com\",\r\n    // \"password\": \"Abcd@123\",\r\n    // \"role\": \"user\" //user, admin\r\n    \"email\": \"admin@gmail.com\",\r\n    \"password\": \"Admin@123\",\r\n    \"role\": \"admin\" //user, admin\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{baseUrl}}/auth/login"
+			},
+			"response": [
+				{
+					"name": "login User / Admin success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"test+1@gmail.com\",\r\n    \"password\": \"Abcd@123\",\r\n    \"role\": \"user\" //user, admin\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/auth/login"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "100"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "99"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 28 Dec 2024 13:10:42 GMT"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1735391473"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "450"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1c2-mgdEULyl1bcO1L4/Zrp133UuR6E\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 1,\n    \"message\": \"Login successful. Welcome back!\",\n    \"data\": {\n        \"_id\": \"676ff308118034a9371b5874\",\n        \"full_name\": \"\",\n        \"phone\": 1010101012,\n        \"email\": \"test+1@gmail.com\",\n        \"created_at\": 1735389960,\n        \"updated_at\": 1735391443,\n        \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QrMUBnbWFpbC5jb20iLCJpZCI6IjY3NmZmMzA4MTE4MDM0YTkzNzFiNTg3NCIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzM1MzkxNDQzLCJleHAiOjE3MzU0Nzc4NDN9.xtDEd7oVrTrNO51XJ3kKDCrQlBeQfVbKRA2JPdo99pc\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Logout User / Admin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "{{accessKey}}",
+						"value": "{{accessToken}}",
+						"type": "text"
+					}
+				],
+				"url": "{{baseUrl}}/auth/logout"
+			},
+			"response": [
+				{
+					"name": "Logout User / Admin Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "{{accessKey}}",
+								"value": "{{accessToken}}",
+								"type": "text"
+							}
+						],
+						"url": "{{baseUrl}}/auth/logout"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "100"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "99"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 28 Dec 2024 17:11:02 GMT"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1735405893"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "74"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"4a-KZLGIGxlfn1JmrWL1ezDT7Zv+Gs\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 1,\n    \"message\": \"You’ve successfully logged out of your account.\"\n}"
+				}
+			]
+		}
+	]
+}
