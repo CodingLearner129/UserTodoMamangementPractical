@@ -14,8 +14,8 @@ export const authenticationMiddleware = async (req, res, next, model, role = "")
                 message: await getMessage('auth.no_token_provided'),
             });
         } else {
-            const decoded = await verifyToken(token);            
-            const getModel = await modelService.getOne(db[model], { _id: decoded.id, access_token: token, role: role == "" ? decoded.role : role }, req);
+            const decoded = await verifyToken(token);
+            const getModel = await modelService.getOne(db[model], { _id: decoded.id, access_token: token }, req);
             if (getModel != null) {
                 if (getModel.blocked_at > 0) {
                     return res.status(config.http_status_auth_fail).send({
@@ -26,6 +26,12 @@ export const authenticationMiddleware = async (req, res, next, model, role = "")
                     return res.status(config.http_status_auth_fail).send({
                         status: config.status_fail,
                         message: await getMessage('auth.account_deleted'),
+                    });
+                    
+                } else if (role == "" ? getModel.role != decoded.role : getModel.role != role) {
+                    return res.status(config.http_status_auth_fail).send({
+                        status: config.status_fail,
+                        message: await getMessage('auth.no_permission'),
                     });
                 } else {
                     req.user = getModel;
