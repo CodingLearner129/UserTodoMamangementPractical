@@ -111,7 +111,8 @@ export const updateTodo = async (req, model) => {
 export const deleteTodo = async (req, model) => {
     try {
         const id = new mongoose.Types.ObjectId(req.params.id);
-        const result = await modelService.getOneAndDelete(db[model], { _id: id, user_id: req.user._id }, req);
+        // const result = await modelService.getOneAndDelete(db[model], { _id: id, user_id: req.user._id }, req);
+        const result = await modelService.getOneAndUpdate(db[model], { _id: id }, { deleted_at: moment().unix() }, req);
         if (result) {
             return response(config.http_status_data_found, {
                 status: config.status_success,
