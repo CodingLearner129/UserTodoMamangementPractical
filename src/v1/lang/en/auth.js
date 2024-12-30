@@ -20,4 +20,5 @@ export default {
     valid_current_password: "Please enter a valid current password.",
     password_change_success: "Your password has been updated successfully! Changing your password regularly helps keep your account secure.",
     account_deleted_success: "Your account has been successfully deleted. We’re sorry to see you go and hope you’ll consider coming back in the future. If you need any assistance, we’re here to help.",
+    no_permission: "Your don't have permission to access this page.",
 }
